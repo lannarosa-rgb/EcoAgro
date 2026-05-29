@@ -3,41 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consumo Consciente: Redução de Agrotóxicos</title>
+    <title>Futuro Verde - Redução de Agrotóxicos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Futuro Verde</h1>
-        <p>Promovendo a redução do uso de agrotóxicos e incentivando a agroecologia</p>
+        <div class="container">
+            <div class="logo">Futuro<span>Verde</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#problema">O Problema</a></li>
+                    <li><a href="#solucoes">Alternativas</a></li>
+                    <li><a href="#calculadora">Simulador</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="card">
-            <h2>Por que reduzir?</h2>
-            <p>O uso excessivo de defensivos químicos afeta a biodiversidade, a qualidade do solo, a água e a saúde humana. Apoiar a transição para métodos orgânicos e agroecológicos é fundamental para a sustentabilidade.</p>
-        </section>
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Por uma agricultura mais saudável e sustentável</h1>
+            <p>Descubra o impacto dos agrotóxicos no nosso planeta e conheça as alternativas que protegem a nossa saúde e o futuro da terra.</p>
+            <a href="#problema" class="btn">Saiba Mais</a>
+        </div>
+    </section>
 
-        <section class="card">
-            <h2>Dicas Práticas</h2>
-            <ul class="dicas-lista">
-                <li>Consuma alimentos da época (safra).</li>
-                <li>Apoie pequenos produtores e feiras orgânicas locais.</li>
-                <li>Lave bem os alimentos em água corrente (embora não elimine o defensivo sistêmico, ajuda na higienização externa).</li>
-            </ul>
-        </section>
+    <section id="problema" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">O Impacto dos Agrotóxicos</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Saúde Humana</h3>
+                    <p>O consumo contínuo de alimentos com altos índices de pesticidas está associado a problemas crônicos de saúde, alergias e distúrbios hormonais.</p>
+                </div>
+                <div class="card">
+                    <h3>Solo e Água</h3>
+                    <p>A contaminação química empobrece os nutrientes do solo e polui lençóis freáticos, afetando rios e ecossistemas inteiros.</p>
+                </div>
+                <div class="card">
+                    <h3>Biodiversidade</h3>
+                    <p>Inseticidas e herbicidas indiscriminados causam o declínio de polinizadores essenciais, como as abelhas, ameaçando a segurança alimentar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="card interativo">
-            <h2>Calculadora de Impacto Simples</h2>
-            <p>Selecione quantas refeições orgânicas você consome por semana para ver seu apoio estimado à área cultivada sem químicos:</p>
-            <input type="number" id="refeicoes" min="0" placeholder="Ex: 5">
-            <button id="btnCalcular">Calcular Área Salva</button>
-            <p id="resultado"></p>
-        </section>
-    </main>
+    <section id="solucoes" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Caminhos para a Redução</h2>
+            <div class="grid-2">
+                <div class="info-box">
+                    <h3>Agroecologia e Orgânicos</h3>
+                    <p>A produção orgânica respeita os ciclos naturais, elimina o uso de insumos sintéticos e foca na saúde do ecossistema como um todo, promovendo alimentos mais ricos em nutrientes.</p>
+                </div>
+                <div class="info-box">
+                    <h3>Manejo Integrado de Pragas (MIP)</h3>
+                    <p>Uma abordagem que utiliza predadores naturais (controle biológico), rotação de culturas e monitoramento constante para controlar pragas sem a necessidade de químicos agressivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculadora" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">Simulador de Impacto Diário</h2>
+            <p>Quantas refeições orgânicas você consome por semana? Veja a estimativa de redução de químicos na sua rotina.</p>
+            
+            <div class="simulador-box">
+                <input type="number" id="refeicoes" min="0" max="21" placeholder="Ex: 5">
+                <button onclick="calcularImpacto()" class="btn">Calcular Impacto</button>
+                <div id="resultado" class="resultado-style"></div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 - Projeto Conscientização Ambiental</p>
+        <p>&copy; 2026 Futuro Verde. Consciência e Sustentabilidade no Prato.</p>
     </footer>
 
     <script src="script.js"></script>
