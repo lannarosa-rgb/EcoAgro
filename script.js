@@ -1,12 +1,17 @@
-// Rolagem suave para seções
-function scrollToSection(id) {
-    const section = document.getElementById(id);
-    section.scrollIntoView({ behavior: 'smooth' });
-}
+document.getElementById('btnCalcular').addEventListener('click', function() {
+    const refeicoes = parseInt(document.getElementById('refeicoes').value);
+    const resultado = document.getElementById('resultado');
 
-// Formulário de contato (simulação)
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Mensagem enviada com sucesso!');
-    this.reset();
+    if (isNaN(refeicoes) || refeicoes < 0) {
+        resultado.textContent = "Por favor, insira um número válido de refeições.";
+        resultado.style.color = "red";
+        return;
+    }
+
+    // Cálculo puramente ilustrativo para engajamento do usuário
+    // Estimando que cada refeição apoia cerca de 0.5 metros quadrados de cultivo sustentável
+    const areaPoupada = refeicoes * 0.5;
+
+    resultado.style.color = "#2c6e49";
+    resultado.textContent = `Ao consumir ${refeicoes} refeições sustentáveis, você apoia estimativamente ${areaPoupada.toFixed(1)} m² de área cultivada livre de agrotóxicos por semana!`;
 });
