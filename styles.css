@@ -1,17 +1,37 @@
-document.getElementById('btnCalcular').addEventListener('click', function() {
-    const refeicoes = parseInt(document.getElementById('refeicoes').value);
-    const resultado = document.getElementById('resultado');
+function calcularImpacto() {
+    // Captura o valor inserido pelo usuário
+    const refeicoesInput = document.getElementById('refeicoes').value;
+    const resultadoDiv = document.getElementById('resultado');
+    
+    // Converte para número inteiro
+    const refeicoes = parseInt(refeicoesInput);
 
+    // Validação simples
     if (isNaN(refeicoes) || refeicoes < 0) {
-        resultado.textContent = "Por favor, insira um número válido de refeições.";
-        resultado.style.color = "red";
+        resultadoDiv.innerHTML = "❌ Por favor, insira um número válido de refeições.";
+        resultadoDiv.style.color = "#d32f2f";
         return;
     }
 
-    // Cálculo puramente ilustrativo para engajamento do usuário
-    // Estimando que cada refeição apoia cerca de 0.5 metros quadrados de cultivo sustentável
-    const areaPoupada = refeicoes * 0.5;
+    if (refeicoes > 21) {
+        resultadoDiv.innerHTML = "❗ O limite máximo considerado é de 21 refeições por semana (3 por dia).";
+        resultadoDiv.style.color = "#f57c00";
+        return;
+    }
 
-    resultado.style.color = "#2c6e49";
-    resultado.textContent = Ao consumir ${refeicoes} refeições sustentáveis, você apoia estimativamente ${areaPoupada.toFixed(1)} m² de área cultivada livre de agrotóxicos por semana!;
-});
+    // Lógica fictícia/educativa de impacto
+    // Estimativa: cada refeição orgânica evita a exposição a aprox. 15g de resíduos/químicos indiretos ao ano na cadeia produtiva
+    const quimicosEvitados = refeicoes * 15; 
+
+    resultadoDiv.style.color = "#2e7d32"; // Reseta para a cor verde de sucesso
+
+    if (refeicoes === 0) {
+        resultadoDiv.innerHTML = "🌱 Cada pequena mudança conta! Que tal tentar incluir 1 refeição orgânica na sua semana?";
+    } else if (refeicoes > 0 && refeicoes <= 7) {
+        resultadoDiv.innerHTML = `👏 Bom começo! Ao escolher ${refeicoes} refeições orgânicas por semana, você ajuda a poupar cerca de ${quimicosEvitados}g de defensivos químicos anuais na natureza.`;
+    } else if (refeicoes > 7 && refeicoes <= 14) {
+        resultadoDiv.innerHTML = `🚀 Ótimo impacto! Com ${refeicoes} refeições limpas, você reduz significativamente a demanda por agrotóxicos e apoia diretamente a agroecologia.`;
+    } else {
+        resultadoDiv.innerHTML = `🌟 Incrível! Você é um verdadeiro defensor do meio ambiente. Seu hábito evita o impacto direto de mais de ${quimicosEvitados}g de químicos por ano no ecossistema!`;
+    }
+}
