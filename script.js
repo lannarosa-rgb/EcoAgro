@@ -1,24 +1,42 @@
 function calcularImpacto() {
-    const diasInput = document.getElementById('dias').value;
-    const resultado = document.getElementById('resultado');
-    
-    const dias = parseInt(diasInput);
+    const dias = parseInt(document.getElementById("dias").value);
+    const resultado = document.getElementById("resultado");
 
-    // Validação
     if (isNaN(dias) || dias < 0 || dias > 7) {
-        resultado.innerHTML = "⚠️ Por favor, insira um número entre 0 e 7 dias.";
+        resultado.textContent = "⚠️ Digite um número entre 0 e 7 dias.";
         resultado.style.color = "#b91c1c";
         return;
     }
 
-    resultado.style.color = "var(--accent)";
+    resultado.style.color = "#16a34a";
 
-    // Mensagens rápidas e de alto impacto
-    if (dias === 0) {
-        resultado.innerHTML = "🌱 Começar com apenas 1 dia na semana já ajuda a impulsionar o mercado local sustentável. Que tal tentar?";
-    } else if (dias <= 3) {
-        resultado.innerHTML = `✨ Ótima escolha. Com ${dias} dias limpos por semana, você reduz consideravelmente sua pegada química anual e apoia pequenos produtores.`;
-    } else {
-        resultado.innerHTML = `🌍 Impacto excepcional! Consumir orgânicos na maior parte da semana protege ativamente os polinizadores e a microbiota do solo.`;
+    let mensagem = "";
+
+    switch (dias) {
+        case 0:
+            mensagem =
+                "🌱 Você ainda não consome refeições orgânicas. Começar com apenas 1 dia por semana já faz diferença para sua saúde e para o meio ambiente.";
+            break;
+
+        case 1:
+        case 2:
+            mensagem =
+                `🌿 Muito bom! Consumindo orgânicos ${dias} dia(s) por semana, você já reduz sua exposição a resíduos de agrotóxicos e incentiva a produção sustentável.`;
+            break;
+
+        case 3:
+        case 4:
+            mensagem =
+                `✨ Excelente! Com ${dias} dias por semana, sua alimentação se torna mais saudável e você contribui para a preservação do solo, da água e da biodiversidade.`;
+            break;
+
+        case 5:
+        case 6:
+        case 7:
+            mensagem =
+                `🌍 Parabéns! Consumir orgânicos ${dias} dias por semana demonstra um forte compromisso com sua saúde, com os agricultores e com o futuro do planeta.`;
+            break;
     }
+
+    resultado.textContent = mensagem;
 }
