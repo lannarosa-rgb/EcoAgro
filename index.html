@@ -3,115 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>BioCultivo — Consciência Coletiva</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="container header-flex">
-            <a href="#" class="logo">Bio<span>Cultivo</span></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#impacto">O Impacto</a></li>
-                    <li><a href="#solucoes">Soluções</a></li>
-                    <li><a href="#simulador">Simulador</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+    <div class="container header-flex">
+        <a href="#" class="logo">Bio<span>Cultivo</span></a>
 
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <span class="tag">O Futuro da Alimentação</span>
-                <h1>Menos química.<br>Mais vida no prato.</h1>
-                <p>A transição para um modelo com menos agrotóxicos protege a biodiversidade, salva os solos e garante um futuro viável para a saúde humana.</p>
-                <a href="#simulador" class="btn">Fazer Simulação</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80" alt="Plantação sustentável brotando">
-            </div>
-        </div>
-    </section>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#impacto">O Impacto</a></li>
+                <li><a href="#solucoes">Soluções</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <section id="impacto" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>Por que reduzir?</h2>
-                <p>Três pilares fundamentais afetados pelo uso massivo de pesticidas sintéticos.</p>
-            </div>
-            
-            <div class="modern-grid-3">
-                <div class="m-card">
-                    <div class="card-icon">🧠</div>
-                    <h3>Saúde</h3>
-                    <p>Reduz a exposição a desreguladores endócrinos e toxinas a longo prazo.</p>
-                </div>
-                <div class="m-card">
-                    <div class="card-icon">💧</div>
-                    <h3>Água Pura</h3>
-                    <p>Evita a contaminação química de lençóis freáticos e rios locais.</p>
-                </div>
-                <div class="m-card">
-                    <div class="card-icon">🐝</div>
-                    <h3>Fauna</h3>
-                    <p>Preserva polinizadores essenciais para 75% das culturas agrícolas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="inicio" class="hero">
+    <div class="container hero-grid">
 
-    <section id="solucoes" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Alternativas Viáveis</h2>
-            </div>
-            
-            <div class="modern-grid-2">
-                <div class="split-card">
-                    <span class="num">01</span>
-                    <div>
-                        <h3>Manejo Integrado (MIP)</h3>
-                        <p>Uso de barreiras físicas e predadores naturais para combater pragas sem desequilibrar o ecossistema.</p>
-                    </div>
-                </div>
-                <div class="split-card">
-                    <span class="num">02</span>
-                    <div>
-                        <h3>Sistemas Agroflorestais</h3>
-                        <p>Plantar alimentos imitando a dinâmica de florestas nativas, gerando adubação e proteção natural.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <div class="hero-text">
+            <span class="tag">O Futuro da Alimentação</span>
 
-    <section id="simulador" class="section-padding">
-        <div class="container">
-            <div class="interactive-container">
-                <h2>Simulador de Impacto</h2>
-                <p>Quantos dias por semana você consome refeições 100% livres de agrotóxicos (orgânicos)?</p>
-                
-                <div class="input-group">
-                    <input type="number" id="dias" min="0" max="7" placeholder="Ex: 3">
-                    <button onclick="calcularImpacto()">Analisar</button>
-                </div>
-                
-                <div id="resultado" class="resultado-box"></div>
+            <h1>Menos química.<br>Mais vida no prato.</h1>
+
+            <p>
+                A transição para um modelo com menos agrotóxicos protege a biodiversidade,
+                salva os solos e garante um futuro viável para a saúde humana.
+            </p>
+
+            <a href="#simulador" class="btn">Fazer Simulação</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80"
+                 alt="Plantação sustentável">
+        </div>
+
+    </div>
+</section>
+
+<section id="impacto" class="section-padding">
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Por que reduzir?</h2>
+            <p>Três pilares fundamentais afetados pelo uso massivo de pesticidas sintéticos.</p>
+        </div>
+
+        <div class="modern-grid-3">
+
+            <div class="m-card">
+                <div class="card-icon">🧠</div>
+                <h3>Saúde</h3>
+                <p>Reduz a exposição a desreguladores endócrinos e toxinas a longo prazo.</p>
             </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 BioCultivo. Informação para um futuro sustentável.</p>
-        </div>
-    </footer>
+            <div class="m-card">
+                <div class="card-icon">💧</div>
+                <h3>Água Pura</h3>
+                <p>Evita a contaminação química de lençóis freáticos e rios locais.</p>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="m-card">
+                <div class="card-icon">🐝</div>
+                <h3>Fauna</h3>
+                <p>Preserva polinizadores essenciais para 75% das culturas agrícolas.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="solucoes" class="section-padding bg-light">
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Alternativas Viáveis</h2>
+        </div>
+
+        <div class="modern-grid-2">
+
+            <div class="split-card">
+                <span class="num">01</span>
+
+                <div>
+                    <h3>Manejo Integrado (MIP)</h3>
+                    <p>
+                        Uso de barreiras físicas e predadores naturais para combater pragas
+                        sem desequilibrar o ecossistema.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="split-card">
+                <span class="num">02</span>
+
+                <div>
+                    <h3>Sistemas Agroflorestais</h3>
+                    <p>
+                        Plantar alimentos imitando a dinâmica das florestas, aumentando a
+                        fertilidade natural do solo.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="simulador" class="section-padding">
+
+    <div class="container">
+
+        <div class="interactive-container">
+
+            <h2>Simulador de Impacto</h2>
+
+            <p>
+                Quantos dias por semana você consome refeições orgânicas?
+            </p>
+
+            <div class="input-group">
+                <input type="number" id="dias" min="0" max="7" placeholder="Ex: 3">
+
+                <button onclick="calcularImpacto()">
+                    Analisar
+                </button>
+            </div>
+
+            <div id="resultado" class="resultado-box"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <div class="container footer-content">
+        <p>&copy; 2026 BioCultivo. Informação para um futuro sustentável.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
